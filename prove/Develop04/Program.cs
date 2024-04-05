@@ -2,13 +2,13 @@ using System;
 using System.Threading;
 using System.Collections.Generic;
 
-class BaseActivity
+class BaseAct
 {
     protected string name;
     protected string description;
     protected int duration;
 
-    public BaseActivity(string name, string description)
+    public BaseAct(string name, string description)
     {
         this.name = name;
         this.description = description;
@@ -20,7 +20,7 @@ class BaseActivity
         Console.WriteLine(description);
         Console.Write("How long, in seconds, would you like for your session? ");
         duration = int.Parse(Console.ReadLine());
-        Console.WriteLine("Prepare to begin...");
+        Console.WriteLine("get ready...");
         Thread.Sleep(1000);
     }
 
@@ -32,7 +32,7 @@ class BaseActivity
     }
 }
 
-class BreathingActivity : BaseActivity
+class BreathingActivity : BaseAct
 {
     public BreathingActivity() : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.")
     {
@@ -58,7 +58,7 @@ class BreathingActivity : BaseActivity
     }
 }
 
-class ReflectionActivity : BaseActivity
+class ReflectionActivity : BaseAct
 {
     private static readonly string[] prompts = {
         "Think of a time when you stood up for someone else.",
@@ -114,7 +114,7 @@ class ReflectionActivity : BaseActivity
     }
 }
 
-class ListingActivity : BaseActivity
+class ListingActivity : BaseAct
 {
     private static readonly string[] prompts = {
         "Who are people that you appreciate?",

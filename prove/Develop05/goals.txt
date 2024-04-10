@@ -1,0 +1,5 @@
+Run a marathon,1000
+Read scriptures,100
+Attend temple,50
+Score,1150
+jaja,1

@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace VotingSystem
 {
-    // Voter class to represent individual voters
+    
     public class Voter
     {
         public string Name { get; set; }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-// Base class for all types of goals
+
 public abstract class Goal
 {
     public string Name { get; set; }
@@ -12,7 +12,7 @@ public abstract class Goal
     public abstract void MarkComplete();
 }
 
-// Simple goal that can be marked complete once
+
 public class SimpleGoal : Goal
 {
     public bool IsCompleted { get; private set; }
@@ -31,7 +31,7 @@ public class SimpleGoal : Goal
     }
 }
 
-// Eternal goal that can be marked complete multiple times
+
 public class EternalGoal : Goal
 {
     public int TimesCompleted { get; private set; }
@@ -43,7 +43,7 @@ public class EternalGoal : Goal
     }
 }
 
-// Checklist goal that must be completed a certain number of times
+
 public class ChecklistGoal : Goal
 {
     public int TargetCount { get; private set; }
@@ -66,7 +66,7 @@ public class ChecklistGoal : Goal
     }
 }
 
-// Class to manage goals and score
+
 public class GoalManager
 {
     private List<Goal> goals = new List<Goal>();
